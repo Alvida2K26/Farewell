@@ -17,7 +17,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <section id="agenda" className="py-16 md:py-24 bg-background">
+        <section id="agenda" className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12 text-accent">
               The Day's Agenda
@@ -28,7 +28,7 @@ export default function Home() {
         
         <Separator className="container my-8 bg-border/20" />
 
-        <section id="menu" className="py-16 md:py-24 bg-background">
+        <section id="menu" className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12 text-accent">
               Gastronomic Journey
@@ -39,7 +39,7 @@ export default function Home() {
 
         <Separator className="container my-8 bg-border/20" />
 
-        <section id="gallery" className="py-16 md:py-24 bg-background">
+        <section id="gallery" className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12 text-accent">
               Memory Lane
