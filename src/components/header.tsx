@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { ThemeToggle } from './theme-toggle';
 
 const navLinks = [
   { href: '#agenda', label: 'Agenda', icon: CalendarDays },
@@ -44,9 +45,8 @@ export function Header() {
           : 'bg-transparent'
       )}
     >
-      <div className="container mx-auto px-4 h-20 flex items-center justify-start gap-4">
-        {/* Navigation */}
-        <div>
+      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+        <div className="flex items-center gap-4">
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
@@ -84,14 +84,15 @@ export function Header() {
               </nav>
             </SheetContent>
           </Sheet>
-        </div>
 
-        <Link href="/" className="flex items-center space-x-2">
-          <GraduationCap className="h-8 w-8 text-primary" />
-          <span className="text-xl font-bold font-headline text-foreground">
-            The Final Prescription
-          </span>
-        </Link>
+          <Link href="/" className="flex items-center space-x-2">
+            <GraduationCap className="h-8 w-8 text-primary" />
+            <span className="text-xl font-bold font-headline text-foreground">
+              The Final Prescription
+            </span>
+          </Link>
+        </div>
+        <ThemeToggle />
       </div>
     </header>
   );
