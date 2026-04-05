@@ -1,5 +1,30 @@
 'use client';
 
+import Image from 'next/image';
+import { Card, CardContent } from '@/components/ui/card';
+import images from '@/lib/placeholder-images.json';
+
+const imageList = Object.values(images);
+
 export function Gallery() {
-  return null;
+  return (
+    <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+      {imageList.map((image, index) => (
+        <div key={index} className="break-inside-avoid">
+          <Card className="overflow-hidden transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
+            <CardContent className="p-0">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={image.width}
+                height={image.height}
+                className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
+                data-ai-hint={image.hint}
+              />
+            </CardContent>
+          </Card>
+        </div>
+      ))}
+    </div>
+  );
 }

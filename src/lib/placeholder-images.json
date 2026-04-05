@@ -1,1 +1,30 @@
-{}
+{
+  "invitation": {
+    "src": "https://picsum.photos/seed/invitation/800/1000",
+    "width": 800,
+    "height": 1000,
+    "alt": "Event Invitation Card for The Final Prescription",
+    "hint": "invitation card"
+  },
+  "award_ceremony": {
+    "src": "https://picsum.photos/seed/award/600/400",
+    "width": 600,
+    "height": 400,
+    "alt": "Student receiving an award at the farewell event.",
+    "hint": "award ceremony"
+  },
+  "dj_night": {
+    "src": "https://picsum.photos/seed/dj/600/400",
+    "width": 600,
+    "height": 400,
+    "alt": "Students enjoying the DJ session and dancing.",
+    "hint": "dj party"
+  },
+  "class_photo": {
+    "src": "https://picsum.photos/seed/classphoto/800/500",
+    "width": 800,
+    "height": 500,
+    "alt": "The graduating class of 2026 group photo.",
+    "hint": "group photo"
+  }
+}
