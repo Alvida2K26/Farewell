@@ -44,7 +44,7 @@ const AgendaCard = ({ item, index, animationDirection }: { item: typeof agendaIt
       )}
       style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'backwards' }}
     >
-      <Card className="bg-card border-border/60 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+      <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
         <CardHeader className={cn(index % 2 !== 0 && 'md:items-end')}>
           <p className="text-sm font-bold text-muted-foreground">{item.time}</p>
           <CardTitle className="font-headline text-xl text-accent leading-tight">{item.title}</CardTitle>
@@ -60,8 +60,8 @@ export function Agenda() {
   return (
     <div className="container mx-auto px-4 py-12">
     <div className="relative">
-      <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-border/30 hidden md:block"></div>
-      <div className="absolute left-5 top-0 h-full w-0.5 -translate-x-1/2 bg-border/30 md:hidden"></div>
+      <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-border hidden md:block"></div>
+      <div className="absolute left-5 top-0 h-full w-0.5 -translate-x-1/2 bg-border md:hidden"></div>
 
       <div className="space-y-12">
         {agendaItems.map((item, index) => (

@@ -62,7 +62,7 @@ export default function Home() {
           </div>
         </section>
         
-        <Separator className="container my-8 bg-border/20" />
+        <Separator className="container my-8 bg-border" />
 
         <section id="menu" className="py-16 md:py-24">
           <div className="container mx-auto px-4">
@@ -73,7 +73,7 @@ export default function Home() {
           </div>
         </section>
 
-        <Separator className="container my-8 bg-border/20" />
+        <Separator className="container my-8 bg-border" />
 
         <section id="gallery" className="py-16 md:py-24">
           <div className="container mx-auto px-4 text-center">
