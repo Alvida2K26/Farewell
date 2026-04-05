@@ -46,14 +46,6 @@ export default function Home() {
               Down Memory Lane
             </h2>
             <Gallery />
-            <div className="mt-12">
-              <Button asChild size="lg">
-                <Link href="https://drive.google.com/drive/folders/1-x4mW5z_1YdTltMvSzO8cLYnmp5nbmzZ?usp=sharing" target="_blank" rel="noopener noreferrer">
-                  <Camera className="mr-2 h-5 w-5" />
-                  View Full Album
-                </Link>
-              </Button>
-            </div>
           </div>
         </section>
 
