@@ -16,7 +16,7 @@ import Link from 'next/link';
 const navLinks = [
   { href: '#agenda', label: 'Agenda', icon: CalendarDays },
   { href: '#menu', label: 'Menu', icon: Utensils },
-  { href: '#gallery', label: 'Memories', icon: Camera },
+  { href: '#gallery', label: 'Gallery', icon: Camera },
 ];
 
 export function Header() {
