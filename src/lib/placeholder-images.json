@@ -1,6 +1,11 @@
 {
   "gallery": [
     {
+      "src": "https://picsum.photos/seed/invitation/600/800",
+      "alt": "The Final Prescription event invitation design",
+      "hint": "event invitation gold"
+    },
+    {
       "src": "https://picsum.photos/seed/invitation-card/600/800",
       "alt": "Event invitation for The Final Prescription",
       "hint": "event invitation"
