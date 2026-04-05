@@ -52,7 +52,7 @@ export function Agenda() {
       >
         <CarouselContent className="-ml-4">
           {agendaItems.map((item, index) => (
-            <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+            <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/3 lg:basis-1/4">
               <div className="p-1 h-full">
                 <Card className="bg-card border-border/60 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full">
                   <CardHeader className="flex flex-row items-start gap-4 space-y-0">
