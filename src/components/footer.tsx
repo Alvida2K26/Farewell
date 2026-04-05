@@ -33,7 +33,7 @@ export function Footer() {
               className="cursor-pointer select-none"
               title="A secret may be revealed..."
             >
-              &copy; 2026 The Final Prescription. All rights reserved.
+              &copy; The Final Prescription. All rights reserved.
             </p>
             <SecretButton />
         </div>

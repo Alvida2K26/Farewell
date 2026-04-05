@@ -83,7 +83,7 @@ export function Header() {
                 ))}
               </nav>
               <div className="p-4 mt-auto text-center text-xs text-muted-foreground border-t border-border/20">
-                &copy; {new Date().getFullYear()} The Final Prescription
+                &copy; The Final Prescription
               </div>
             </SheetContent>
           </Sheet>
