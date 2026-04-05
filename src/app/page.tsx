@@ -43,9 +43,15 @@ export default function Home() {
         <section id="gallery" className="py-16 md:py-24">
           <div className="container mx-auto px-4 text-center">
             <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12 text-accent">
-              Down Memory Lane
+              Gallery
             </h2>
             <Gallery />
+            <Button asChild className="mt-8">
+                <Link href="https://drive.google.com/drive/folders/1-x4mW5z_1YdTltMvSzO8cLYnmp5nbmzZ?usp=drive_link" target="_blank">
+                    <Camera className="mr-2" />
+                    View Full Album
+                </Link>
+            </Button>
           </div>
         </section>
 
