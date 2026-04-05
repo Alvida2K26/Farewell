@@ -151,8 +151,8 @@ export function Particles() {
         const size = Math.random() * 1.5 + 0.5;
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
-        const speedX = (Math.random() - 0.5) * 0.3;
-        const speedY = (Math.random() - 0.5) * 0.3;
+        const speedX = (Math.random() - 0.5) * 0.1;
+        const speedY = (Math.random() - 0.5) * 0.1;
         const colors = isDarkMode
           ? ['#E3B041', 'rgba(255,255,255,0.7)', '#99c3ff'] // Gold, White, Light Blue
           : ['#718096', 'rgba(45, 55, 72, 0.5)', '#4a5568'];
