@@ -1,9 +1,11 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
 import images from '@/lib/placeholder-images.json';
 
 const imageList = Object.values(images).filter((image) => image.src && image.width && image.height);
@@ -50,6 +52,7 @@ export function Gallery() {
         onOpenChange={(isOpen) => !isOpen && setSelectedImage(null)}
       >
         <DialogContent className="max-w-5xl w-full p-0 bg-transparent border-0">
+          <DialogTitle className="sr-only">Image</DialogTitle>
           {selectedImage && (
             <Image
               src={selectedImage.src}

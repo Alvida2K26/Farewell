@@ -56,7 +56,7 @@ export function Particles() {
         this.opacitySpeed = (Math.random() - 0.5) * 0.02;
       }
 
-      update() {
+      update(canvas: HTMLCanvasElement) {
         this.x += this.speedX;
         this.y += this.speedY;
 
@@ -165,7 +165,7 @@ export function Particles() {
       if (!ctx || !canvas) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (const particle of particles) {
-        particle.update();
+        particle.update(canvas);
         particle.draw();
       }
       requestAnimationFrame(animate);

@@ -1,17 +1,16 @@
 {
-  "my-photo": {
-    "src": "/images/my-photo.png",
-    "width": 800,
-    "height": 600,
-    "alt": "A photo from the event.",
-    "hint": "event photo"
-  },
-  "photo-003": {
+  "gdrive-image-1": {
     "src": "/images/003.jpeg",
     "width": 800,
     "height": 600,
-    "alt": "A photo from the event.",
-    "hint": "event guest"
+    "alt": "Event photo 1",
+    "hint": "event photo"
   },
-  "invitation": {}
+  "gdrive-image-2": {
+    "src": "/images/my-photo.png",
+    "width": 800,
+    "height": 600,
+    "alt": "Event photo 2",
+    "hint": "event photo"
+  }
 }
