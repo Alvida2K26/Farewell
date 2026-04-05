@@ -1,23 +1,23 @@
 {
-  "user-photo": {
+  "my-photo": {
     "src": "/images/my-photo.png",
     "width": 800,
     "height": 600,
     "alt": "A photo from the event.",
     "hint": "event photo"
   },
-  "invitation": {
-    "src": "/images/invitation.svg",
-    "width": 800,
-    "height": 1000,
-    "alt": "The farewell event invitation.",
-    "hint": "event invitation"
-  },
-  "new-photo": {
+  "photo-003": {
     "src": "/images/003.jpeg",
     "width": 800,
     "height": 600,
     "alt": "A photo from the event.",
-    "hint": "event photo"
+    "hint": "event guest"
+  },
+  "invitation": {
+    "src": "/images/invitation-placeholder.svg",
+    "width": 600,
+    "height": 800,
+    "alt": "The event invitation.",
+    "hint": "event invitation"
   }
 }
