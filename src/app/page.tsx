@@ -45,6 +45,13 @@ export default function Home() {
               Memory Lane
             </h2>
             <Gallery />
+            <div className="text-center mt-12">
+              <Link href="https://drive.google.com/drive/folders/1-x4mW5z_1YdTltMvSzO8cLYnmp5nbmzZ?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                <Button size="lg">
+                  View Full Photo Album
+                </Button>
+              </Link>
+            </div>
           </div>
         </section>
 
