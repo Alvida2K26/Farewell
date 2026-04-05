@@ -1,11 +1,6 @@
 {
   "gallery": [
     {
-      "src": "https://picsum.photos/seed/invitation/600/800",
-      "alt": "The Final Prescription event invitation design",
-      "hint": "event invitation gold"
-    },
-    {
       "src": "https://picsum.photos/seed/invitation-card/600/800",
       "alt": "Event invitation for The Final Prescription",
       "hint": "event invitation"
@@ -44,6 +39,21 @@
       "src": "https://picsum.photos/seed/event7/600/400",
       "alt": "Cake cutting ceremony",
       "hint": "cake cutting"
+    },
+    {
+      "src": "https://picsum.photos/seed/event8/600/400",
+      "alt": "Students receiving awards",
+      "hint": "award ceremony"
+    },
+    {
+      "src": "https://picsum.photos/seed/event9/600/800",
+      "alt": "Students dancing at the DJ session",
+      "hint": "party dancing"
+    },
+    {
+      "src": "https://picsum.photos/seed/event10/800/600",
+      "alt": "Graduating class group photo",
+      "hint": "graduation group"
     }
   ]
 }
