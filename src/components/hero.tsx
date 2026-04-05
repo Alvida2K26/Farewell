@@ -4,7 +4,7 @@ import { Countdown } from './countdown';
 import { Particles } from './particles';
 
 export function Hero() {
-  const targetDate = new Date('2026-04-15T23:59:59.000+05:30'); // IST
+  const targetDate = new Date('2026-04-15T10:00:00.000+05:30'); // IST
 
   return (
     <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
