@@ -1,23 +1,48 @@
-# How to add your own images
+# How to Add Your Own Images
 
-1.  **Upload your images here:** Place your image files (e.g., `my-photo.jpg`, `event-picture.png`) directly into this `public/images/` folder.
+This folder is where you can add your custom images for the gallery.
 
-2.  **Update the gallery:** Open the `src/lib/placeholder-images.json` file.
+**Step 1: Upload Your Images**
 
-3.  **Add a new entry for each image:** For each image you uploaded, add a new block to the JSON file like this:
+Drag and drop your image files (e.g., `my-photo.jpg`, `another-pic.png`) into this `public/images/` folder.
 
-    ```json
-    "yourImageId": {
-      "src": "/images/your-image-name.jpg",
-      "width": 800,
-      "height": 600,
-      "alt": "A description of your image for accessibility.",
-      "hint": "some keywords"
-    }
-    ```
+**Step 2: Update the Image List**
 
-    -   Replace `"yourImageId"` with a unique name for your image.
-    -   Replace `"/images/your-image-name.jpg"` with the correct path to your file.
-    -   Adjust the `width`, `height`, `alt`, and `hint` to match your image.
+Open the file located at: `src/lib/placeholder-images.json`
 
-That's it! The gallery will automatically update with your new pictures.
+You will see a structure like this:
+
+```json
+{
+  "invitation": {
+    "src": "/images/invitation-placeholder.svg",
+    "width": 800,
+    "height": 1000,
+    "alt": "Farewell event invitation",
+    "hint": "event invitation"
+  },
+  "group_photo": {
+    "src": "/images/group-photo.svg",
+    "width": 800,
+    "height": 600,
+    "alt": "A group photo of the graduating class.",
+    "hint": "group photo"
+  }
+}
+```
+
+To add your image, create a new entry. For example, if you added `my-photo.jpg` to this folder:
+
+```json
+"my_awesome_photo": {
+  "src": "/images/my-photo.jpg",
+  "width": 800,   // Change to your image's width
+  "height": 600,  // Change to your image's height
+  "alt": "A description of my awesome photo",
+  "hint": "my photo"
+}
+```
+
+**IMPORTANT:** The `src` path MUST start with `/images/` followed by your exact file name.
+
+Save the `placeholder-images.json` file, and your image will appear in the gallery.

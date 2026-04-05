@@ -3,7 +3,28 @@
     "src": "/images/invitation-placeholder.svg",
     "width": 800,
     "height": 1000,
-    "alt": "A placeholder for the farewell event invitation",
+    "alt": "A placeholder for the farewell event invitation. Replace this by adding your image to public/images and updating this file.",
     "hint": "event invitation"
+  },
+  "group_photo": {
+    "src": "/images/group-photo.svg",
+    "width": 800,
+    "height": 600,
+    "alt": "A placeholder for a group photo.",
+    "hint": "group photo"
+  },
+  "award_ceremony": {
+    "src": "/images/award-ceremony.svg",
+    "width": 800,
+    "height": 600,
+    "alt": "A placeholder for the award ceremony.",
+    "hint": "award ceremony"
+  },
+  "dj_night": {
+    "src": "/images/dj-night.svg",
+    "width": 800,
+    "height": 600,
+    "alt": "A placeholder for the DJ night.",
+    "hint": "dj night"
   }
 }
