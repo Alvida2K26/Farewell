@@ -82,9 +82,6 @@ export function Header() {
                   </a>
                 ))}
               </nav>
-              <div className="p-4 mt-auto text-center text-xs text-muted-foreground border-t border-border/20">
-                &copy; The Final Prescription
-              </div>
             </SheetContent>
           </Sheet>
         </div>
