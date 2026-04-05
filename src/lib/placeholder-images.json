@@ -1,0 +1,39 @@
+{
+  "gallery": [
+    {
+      "src": "https://picsum.photos/seed/event1/600/400",
+      "alt": "Students arriving at the event",
+      "hint": "event arrival"
+    },
+    {
+      "src": "https://picsum.photos/seed/event2/600/400",
+      "alt": "Lighting the ceremonial lamp",
+      "hint": "ceremony tradition"
+    },
+    {
+      "src": "https://picsum.photos/seed/event3/600/400",
+      "alt": "A student giving a speech",
+      "hint": "public speaking"
+    },
+    {
+      "src": "https://picsum.photos/seed/event4/600/400",
+      "alt": "Classical dance performance",
+      "hint": "dance performance"
+    },
+    {
+      "src": "https://picsum.photos/seed/event5/600/400",
+      "alt": "Group of students singing",
+      "hint": "group singing"
+    },
+    {
+      "src": "https://picsum.photos/seed/event6/600/400",
+      "alt": "Students enjoying lunch",
+      "hint": "eating lunch"
+    },
+    {
+      "src": "https://picsum.photos/seed/event7/600/400",
+      "alt": "Cake cutting ceremony",
+      "hint": "cake cutting"
+    }
+  ]
+}

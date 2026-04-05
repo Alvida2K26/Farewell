@@ -64,7 +64,7 @@ export function Particles() {
         const y = Math.random() * canvas.height;
         const speedX = (Math.random() - 0.5) * 0.5;
         const speedY = (Math.random() - 0.5) * 0.5;
-        const colors = ['#136FF7', '#F2CA3D', 'rgba(255,255,255,0.7)'];
+        const colors = ['#E3B041', 'rgba(255,255,255,0.7)'];
         const color = colors[Math.floor(Math.random() * colors.length)];
         particles.push(new Particle(x, y, size, speedX, speedY, color));
       }
@@ -90,7 +90,7 @@ export function Particles() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute top-0 left-0 w-full h-full bg-background -z-10"
+      className="absolute top-0 left-0 w-full h-full -z-10"
     />
   );
 }

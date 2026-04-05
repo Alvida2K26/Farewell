@@ -2,14 +2,29 @@
 
 import { Countdown } from './countdown';
 import { Calendar, MapPin } from 'lucide-react';
+import { Particles } from './particles';
+import Image from 'next/image';
 
 export function Hero() {
   const targetDate = new Date('2026-04-15T10:00:00.000+05:30'); // IST
 
   return (
     <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden bg-background p-4 py-16">
+      <Image
+        src="https://picsum.photos/seed/invitation/1920/1080"
+        alt="Elegant background for a farewell event"
+        fill
+        quality={80}
+        className="object-cover -z-20"
+        data-ai-hint="gold pattern"
+      />
       <div 
-        className="relative z-10 p-6 md:p-8 border-2 border-accent/30 rounded-lg max-w-3xl w-full bg-card/50"
+        className="absolute inset-0 bg-black/60 -z-10"
+      />
+      <Particles />
+      
+      <div 
+        className="relative z-10 p-6 md:p-8 border-2 border-accent/30 rounded-lg max-w-3xl w-full bg-card/50 backdrop-blur-sm"
       >
         <p className="font-body text-base md:text-lg text-muted-foreground">
           You Are Cordially Invited To

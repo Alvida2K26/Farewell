@@ -3,13 +3,14 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu } from 'lucide-react';
+import { GraduationCap, Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
 const navLinks = [
   { href: '#agenda', label: 'Agenda' },
   { href: '#menu', label: 'Menu' },
+  { href: '#gallery', label: 'Gallery' },
 ];
 
 export function Header() {
@@ -44,60 +45,41 @@ export function Header() {
                 <Menu />
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-background">
-              <div className="flex flex-col h-full">
-                <div className="flex items-center justify-between p-4 border-b">
+            <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-background p-0 flex flex-col">
+                <div className="flex items-center justify-between p-4 border-b border-border/30">
                    <Link href="/" className="flex items-center space-x-2" onClick={handleLinkClick}>
-                     <PillIcon className="h-6 w-6 text-primary" />
+                     <GraduationCap className="h-6 w-6 text-primary" />
                      <span className="text-lg font-bold font-headline text-foreground">
                         The Final Prescription
                       </span>
                    </Link>
                 </div>
-                <nav className="flex flex-col items-center justify-center flex-1 space-y-6">
+                <nav className="flex flex-col items-center justify-center flex-1 space-y-8">
                   {navLinks.map((link) => (
                     <a
                       key={link.label}
                       href={link.href}
                       onClick={handleLinkClick}
-                      className="text-2xl font-headline hover:text-accent transition-colors"
+                      className="text-3xl font-headline hover:text-accent transition-colors"
                     >
                       {link.label}
                     </a>
                   ))}
                 </nav>
-              </div>
+                 <div className='p-4 mt-auto text-center text-xs text-muted-foreground'>
+                  &copy; {new Date().getFullYear()}
+                </div>
             </SheetContent>
           </Sheet>
         </div>
 
         <Link href="/" className="flex items-center space-x-2">
-          <PillIcon className="h-8 w-8 text-primary" />
+          <GraduationCap className="h-8 w-8 text-primary" />
           <span className="text-xl font-bold font-headline text-foreground">
             The Final Prescription
           </span>
         </Link>
       </div>
     </header>
-  );
-}
-
-function PillIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z" />
-      <path d="m8.5 8.5 7 7" />
-    </svg>
   );
 }
