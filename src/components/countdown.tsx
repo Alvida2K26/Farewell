@@ -52,7 +52,7 @@ export function Countdown({ targetDate }: { targetDate: Date }) {
     <div className="flex justify-center gap-4 md:gap-8">
       {Object.entries(timeLeft).map(([unit, value]) => (
         <div key={unit} className="flex flex-col items-center">
-          <div className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold text-white bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+          <div className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold text-white bg-black/20 dark:bg-white/10 backdrop-blur-sm p-4 rounded-lg">
             {String(value).padStart(2, '0')}
           </div>
           <div className="mt-2 text-sm md:text-base uppercase text-accent font-semibold tracking-wider">
