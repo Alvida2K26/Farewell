@@ -2,51 +2,87 @@
   "placeholderImages": [
     {
       "id": "gallery-1",
-      "description": "A group of friends celebrating at an event.",
-      "imageUrl": "https://picsum.photos/seed/101/600/400",
-      "imageHint": "event celebration"
+      "description": "Welcome drinks being served upon arrival.",
+      "imageUrl": "https://picsum.photos/seed/201/600/400",
+      "imageHint": "welcome drinks"
     },
     {
       "id": "gallery-2",
-      "description": "A candid shot of people laughing during a speech.",
-      "imageUrl": "https://picsum.photos/seed/102/600/400",
-      "imageHint": "candid people"
+      "description": "Seniors being welcomed with flowers.",
+      "imageUrl": "https://picsum.photos/seed/202/600/400",
+      "imageHint": "welcoming flowers"
     },
     {
       "id": "gallery-3",
-      "description": "A beautifully decorated event venue at night.",
-      "imageUrl": "https://picsum.photos/seed/103/600/400",
-      "imageHint": "event venue"
+      "description": "The ceremonial lighting of the lamp to inaugurate the event.",
+      "imageUrl": "https://picsum.photos/seed/203/600/400",
+      "imageHint": "lamp lighting"
     },
     {
       "id": "gallery-4",
-      "description": "A DJ playing music at a party with a vibrant crowd.",
-      "imageUrl": "https://picsum.photos/seed/104/600/400",
-      "imageHint": "DJ party"
+      "description": "A speaker sharing experiences and memories on stage.",
+      "imageUrl": "https://picsum.photos/seed/204/600/400",
+      "imageHint": "speech session"
     },
     {
       "id": "gallery-5",
-      "description": "Close-up of friends taking a selfie.",
-      "imageUrl": "https://picsum.photos/seed/105/600/400",
-      "imageHint": "friends selfie"
+      "description": "A mesmerizing classical dance performance.",
+      "imageUrl": "https://picsum.photos/seed/205/600/400",
+      "imageHint": "classical dance"
     },
     {
       "id": "gallery-6",
-      "description": "A formal dinner setting at the event.",
-      "imageUrl": "https://picsum.photos/seed/106/600/400",
-      "imageHint": "dinner setting"
+      "description": "Juniors performing a group dance on stage.",
+      "imageUrl": "https://picsum.photos/seed/206/600/400",
+      "imageHint": "group dance"
     },
     {
       "id": "gallery-7",
-      "description": "Graduates in caps and gowns tossing them in the air.",
-      "imageUrl": "https://picsum.photos/seed/107/600/400",
-      "imageHint": "graduation celebration"
+      "description": "A spread of delicious refreshments and lunch.",
+      "imageUrl": "https://picsum.photos/seed/207/600/400",
+      "imageHint": "event refreshments"
     },
     {
       "id": "gallery-8",
-      "description": "A dance floor full of people enjoying the music.",
-      "imageUrl": "https://picsum.photos/seed/108/600/400",
-      "imageHint": "dance floor"
+      "description": "Contestants for the Mr. and Ms. Farewell title.",
+      "imageUrl": "https://picsum.photos/seed/208/600/400",
+      "imageHint": "farewell contest"
+    },
+    {
+      "id": "gallery-9",
+      "description": "A contestant walking the ramp during the contest.",
+      "imageUrl": "https://picsum.photos/seed/209/600/400",
+      "imageHint": "ramp walk"
+    },
+    {
+      "id": "gallery-10",
+      "description": "A student receiving a memento on stage.",
+      "imageUrl": "https://picsum.photos/seed/210/600/400",
+      "imageHint": "award ceremony"
+    },
+    {
+      "id": "gallery-11",
+      "description": "An AV presentation showcasing memories.",
+      "imageUrl": "https://picsum.photos/seed/211/600/400",
+      "imageHint": "presentation memories"
+    },
+    {
+      "id": "gallery-12",
+      "description": "A beautiful cake for the cake cutting ceremony.",
+      "imageUrl": "https://picsum.photos/seed/212/600/400",
+      "imageHint": "cake cutting"
+    },
+    {
+      "id": "gallery-13",
+      "description": "A speaker giving a vote of thanks.",
+      "imageUrl": "https://picsum.photos/seed/213/600/400",
+      "imageHint": "vote thanks"
+    },
+    {
+      "id": "gallery-14",
+      "description": "People dancing and celebrating during the DJ session.",
+      "imageUrl": "https://picsum.photos/seed/214/600/400",
+      "imageHint": "DJ party"
     }
   ]
 }

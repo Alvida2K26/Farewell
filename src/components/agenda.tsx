@@ -1,13 +1,34 @@
-import { Clock, Utensils, Music, Mic, PartyPopper } from 'lucide-react';
+import { 
+  GlassWater, 
+  Flower2, 
+  Flame, 
+  Mic, 
+  Music, 
+  Users, 
+  Utensils, 
+  Crown, 
+  Award, 
+  Film, 
+  Cake, 
+  Handshake,
+  PartyPopper 
+} from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const agendaItems = [
-  { time: '5:00 PM', title: 'Welcome & Registration', icon: PartyPopper, description: 'Check-in, grab your name tag, and mingle with fellow attendees.' },
-  { time: '6:00 PM', title: 'Opening Remarks', icon: Mic, description: 'A warm welcome and overview of the evening\'s festivities.' },
-  { time: '6:30 PM', title: 'Dinner is Served', icon: Utensils, description: 'Indulge in a delicious spread of culinary delights.' },
-  { time: '8:00 PM', title: 'Awards & Nostalgia', icon: Clock, description: 'A trip down memory lane with awards and shared stories.' },
-  { time: '9:00 PM', title: 'Live Music Performance', icon: Music, description: 'Enjoy the soulful tunes from our special musical guest.' },
-  { time: '10:00 PM', title: 'DJ Night Begins', icon: PartyPopper, description: 'Hit the dance floor as the DJ spins the latest tracks and classic hits.' },
+  { time: '5:00 PM', title: 'Arrival & Welcome Drinks', icon: GlassWater, description: 'Check-in and get refreshed with a welcome drink.' },
+  { time: '5:30 PM', title: 'Welcoming Seniors', icon: Flower2, description: 'A warm floral welcome for our esteemed seniors.' },
+  { time: '6:00 PM', title: 'Inauguration Ceremony', icon: Flame, description: 'The formal start with the lighting of the lamp and a prayer.' },
+  { time: '6:30 PM', title: 'Down Memory Lane', icon: Mic, description: 'Speeches and shared experiences from seniors and faculty.' },
+  { time: '7:00 PM', title: 'Cultural Showcase', icon: Music, description: 'Mesmerizing classical dance performances.' },
+  { time: '7:30 PM', title: 'Junior Performances', icon: Users, description: 'Energetic group dances, songs, and more from the juniors.' },
+  { time: '8:00 PM', title: 'Dinner & Refreshments', icon: Utensils, description: 'Indulge in a delicious spread of culinary delights.' },
+  { time: '9:00 PM', title: 'Mr. & Ms. Farewell', icon: Crown, description: 'The much-awaited contest begins with a ramp walk and talent rounds.' },
+  { time: '9:45 PM', title: 'Felicitation', icon: Award, description: 'Distribution of titles, mementos, and certificates.' },
+  { time: '10:15 PM', title: 'A Nostalgic Journey', icon: Film, description: 'An AV presentation to relive cherished moments.' },
+  { time: '10:45 PM', title: 'Cake Cutting Ceremony', icon: Cake, description: 'A sweet moment to mark the occasion.' },
+  { time: '11:00 PM', title: 'Vote of Thanks', icon: Handshake, description: 'Expressing gratitude to everyone who made the evening special.' },
+  { time: '11:15 PM', title: 'DJ Night & Closing Celebrations', icon: PartyPopper, description: 'Hit the dance floor and celebrate!' },
 ];
 
 export function Agenda() {
