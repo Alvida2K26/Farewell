@@ -1,9 +1,9 @@
 {
   "invitation": {
-    "src": "https://picsum.photos/seed/invitation/800/1000",
+    "src": "/images/invitation-placeholder.svg",
     "width": 800,
     "height": 1000,
-    "alt": "A farewell event invitation for 'The Final Prescription'",
+    "alt": "A placeholder for the farewell event invitation",
     "hint": "event invitation"
   }
 }
