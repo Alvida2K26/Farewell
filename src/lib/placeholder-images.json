@@ -7,28 +7,10 @@
       "imageHint": "welcome drinks"
     },
     {
-      "id": "gallery-2",
-      "description": "Seniors being welcomed with flowers.",
-      "imageUrl": "https://picsum.photos/seed/202/600/400",
-      "imageHint": "welcoming flowers"
-    },
-    {
       "id": "gallery-3",
       "description": "The ceremonial lighting of the lamp to inaugurate the event.",
       "imageUrl": "https://picsum.photos/seed/203/600/400",
       "imageHint": "lamp lighting"
-    },
-    {
-      "id": "gallery-4",
-      "description": "A speaker sharing experiences and memories on stage.",
-      "imageUrl": "https://picsum.photos/seed/204/600/400",
-      "imageHint": "speech session"
-    },
-    {
-      "id": "gallery-5",
-      "description": "A mesmerizing classical dance performance.",
-      "imageUrl": "https://picsum.photos/seed/205/600/400",
-      "imageHint": "classical dance"
     },
     {
       "id": "gallery-6",
@@ -37,22 +19,10 @@
       "imageHint": "group dance"
     },
     {
-      "id": "gallery-7",
-      "description": "A spread of delicious refreshments and lunch.",
-      "imageUrl": "https://picsum.photos/seed/207/600/400",
-      "imageHint": "event refreshments"
-    },
-    {
       "id": "gallery-8",
       "description": "Contestants for the Mr. and Ms. Farewell title.",
       "imageUrl": "https://picsum.photos/seed/208/600/400",
       "imageHint": "farewell contest"
-    },
-    {
-      "id": "gallery-9",
-      "description": "A contestant walking the ramp during the contest.",
-      "imageUrl": "https://picsum.photos/seed/209/600/400",
-      "imageHint": "ramp walk"
     },
     {
       "id": "gallery-10",
@@ -61,22 +31,10 @@
       "imageHint": "award ceremony"
     },
     {
-      "id": "gallery-11",
-      "description": "An AV presentation showcasing memories.",
-      "imageUrl": "https://picsum.photos/seed/211/600/400",
-      "imageHint": "presentation memories"
-    },
-    {
       "id": "gallery-12",
       "description": "A beautiful cake for the cake cutting ceremony.",
       "imageUrl": "https://picsum.photos/seed/212/600/400",
       "imageHint": "cake cutting"
-    },
-    {
-      "id": "gallery-13",
-      "description": "A speaker giving a vote of thanks.",
-      "imageUrl": "https://picsum.photos/seed/213/600/400",
-      "imageHint": "vote thanks"
     },
     {
       "id": "gallery-14",
