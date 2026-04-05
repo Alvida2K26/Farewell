@@ -16,6 +16,7 @@ import {
   PartyPopper,
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
 
 const agendaItems = [
   { time: '10:00 AM', title: 'Arrival & Welcome', icon: Flower2, description: 'Welcome drinks are served as we greet our seniors with souvenirs or flowers.' },
@@ -33,25 +34,68 @@ const agendaItems = [
   { time: '4:30 PM - 5:00 PM', title: 'DJ Session & Closing', icon: PartyPopper, description: 'DJ session and closing celebrations.' },
 ];
 
+const AgendaCard = ({ item, index, animationDirection }: { item: typeof agendaItems[0], index: number, animationDirection: 'left' | 'right' }) => (
+    <div
+      className={cn(
+        'w-full animate-in fade-in-0 duration-700',
+        'md:max-w-md',
+        animationDirection === 'left' ? 'md:slide-in-from-left-24' : 'md:slide-in-from-right-24',
+        index % 2 !== 0 && 'md:text-right'
+      )}
+      style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'backwards' }}
+    >
+      <Card className="bg-card border-border/60 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1">
+        <CardHeader className={cn(index % 2 !== 0 && 'md:items-end')}>
+          <p className="text-sm font-bold text-muted-foreground">{item.time}</p>
+          <CardTitle className="font-headline text-xl text-accent leading-tight">{item.title}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-muted-foreground text-sm">{item.description}</p>
+        </CardContent>
+      </Card>
+    </div>
+  );
+
 export function Agenda() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-      {agendaItems.map((item, index) => (
-        <Card key={index} className="bg-card border-border/60 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full">
-          <CardHeader className="flex flex-row items-start gap-4 space-y-0">
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground flex-shrink-0 mt-1">
-                <item.icon className="w-5 h-5" />
+    <div className="container mx-auto px-4 py-12">
+    <div className="relative">
+      <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-border/30 hidden md:block"></div>
+      <div className="absolute left-5 top-0 h-full w-0.5 -translate-x-1/2 bg-border/30 md:hidden"></div>
+
+      <div className="space-y-12">
+        {agendaItems.map((item, index) => (
+          <div
+            key={index}
+            className="relative flex items-center md:justify-center"
+          >
+            {/* Desktop timeline item (Right) */}
+            <div className={cn('hidden md:flex w-5/12', index % 2 === 0 ? 'justify-end pr-8' : 'justify-start pl-8' )}>
+              {index % 2 !== 0 && (
+                <AgendaCard item={item} index={index} animationDirection="right" />
+              )}
             </div>
-            <div className="flex flex-col">
-              <CardTitle className="font-headline text-xl text-accent leading-tight">{item.title}</CardTitle>
-              <p className="text-sm font-bold text-muted-foreground">{item.time}</p>
+
+            <div className="absolute left-5 md:static z-10 flex h-10 w-10 items-center justify-center rounded-full bg-primary border-4 border-background text-primary-foreground transform -translate-x-1/2 md:translate-x-0">
+              <item.icon className="h-5 w-5" />
             </div>
-          </CardHeader>
-          <CardContent className="flex-grow">
-            <p className="text-muted-foreground text-sm">{item.description}</p>
-          </CardContent>
-        </Card>
-      ))}
+
+            {/* Desktop timeline item (Left) */}
+             <div className={cn('hidden md:flex w-5/12', index % 2 === 0 ? 'justify-start pl-8' : 'justify-end pr-8' )}>
+              {index % 2 === 0 && (
+                <AgendaCard item={item} index={index} animationDirection="left" />
+              )}
+            </div>
+            
+            {/* Mobile timeline item */}
+            <div className="md:hidden w-full ml-12">
+                <AgendaCard item={item} index={index} animationDirection="left" />
+            </div>
+
+          </div>
+        ))}
+      </div>
     </div>
+  </div>
   );
 }
