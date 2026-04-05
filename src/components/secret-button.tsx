@@ -21,7 +21,7 @@ export function SecretButton() {
   return (
     <div className="relative">
       <Button variant="ghost" onClick={handleClick}>
-        {revealed ? 'Made with ❤️' : 'A Secret'}
+        {revealed ? '3rd year' : 'A Secret'}
       </Button>
       {revealed && (
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
