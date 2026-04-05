@@ -33,46 +33,22 @@ const agendaItems = [
 
 export function Agenda() {
   return (
-    <div className="relative max-w-3xl mx-auto">
-      <div className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-border/40"></div>
-      
+    <div className="max-w-5xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {agendaItems.map((item, index) => (
-        <div key={index} className="relative mb-8">
-          <div className="flex items-center">
-            <div className="flex-1 text-right pr-12">
-              {index % 2 === 0 && (
-                <Card className="bg-card border-border/60 hover:border-primary/50 transition-all duration-300 transform hover:-translate-x-2">
-                  <CardHeader>
-                    <CardTitle className="font-headline text-xl text-accent">{item.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{item.description}</p>
-                  </CardContent>
-                </Card>
-              )}
+        <Card key={index} className="bg-card border-border/60 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1 flex flex-col">
+          <CardHeader className="flex flex-row items-start gap-4 space-y-0">
+            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground flex-shrink-0 mt-1">
+                <item.icon className="w-5 h-5" />
             </div>
-
-            <div className="z-10 w-24 flex-shrink-0 text-center">
-              <div className="w-12 h-12 bg-primary rounded-full mx-auto flex items-center justify-center text-primary-foreground ring-8 ring-background">
-                <item.icon className="w-6 h-6" />
-              </div>
-              <p className="mt-2 font-bold text-accent">{item.time}</p>
+            <div className="flex flex-col">
+              <CardTitle className="font-headline text-xl text-accent leading-tight">{item.title}</CardTitle>
+              <p className="text-sm font-bold text-muted-foreground">{item.time}</p>
             </div>
-
-            <div className="flex-1 pl-12">
-              {index % 2 !== 0 && (
-                 <Card className="bg-card border-border/60 hover:border-primary/50 transition-all duration-300 transform hover:translate-x-2">
-                  <CardHeader>
-                    <CardTitle className="font-headline text-xl text-accent">{item.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{item.description}</p>
-                  </CardContent>
-                </Card>
-              )}
-            </div>
-          </div>
-        </div>
+          </CardHeader>
+          <CardContent className="flex-grow">
+            <p className="text-muted-foreground text-sm">{item.description}</p>
+          </CardContent>
+        </Card>
       ))}
     </div>
   );

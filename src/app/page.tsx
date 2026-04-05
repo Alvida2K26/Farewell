@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Hero } from '@/components/hero';
 import { Header } from '@/components/header';
 import { Agenda } from '@/components/agenda';
@@ -9,6 +10,7 @@ import { Gallery } from '@/components/gallery';
 import { Footer } from '@/components/footer';
 import { AdminDashboard } from '@/components/admin-dashboard';
 import { Separator } from '@/components/ui/separator';
+import { Button } from '@/components/ui/button';
 
 export default function Home() {
   const [showAdmin, setShowAdmin] = useState(false);
@@ -63,6 +65,13 @@ export default function Home() {
               A collection of moments that we will cherish forever. Relive the laughter, the joy, and the camaraderie.
             </p>
             <Gallery />
+            <div className="text-center mt-12">
+              <Button asChild size="lg">
+                <Link href="https://drive.google.com/drive/folders/1-x4mW5z_1YdTltMvSzO8cLYnmp5nbmzZ?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                  View Full Photo Album
+                </Link>
+              </Button>
+            </div>
           </div>
         </section>
 
