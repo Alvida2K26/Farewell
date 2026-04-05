@@ -12,11 +12,14 @@ import { Gallery } from '@/components/gallery';
 import { Button } from '@/components/ui/button';
 import { Camera } from 'lucide-react';
 import { Countdown } from '@/components/countdown';
+import { useToast } from '@/hooks/use-toast';
 
 const linkRevealDate = new Date('2026-04-15T09:59:00');
 
 export default function Home() {
   const [showAlbumLink, setShowAlbumLink] = useState(false);
+  const [galleryClicks, setGalleryClicks] = useState(0);
+  const { toast } = useToast();
 
   useEffect(() => {
     const checkDate = () => {
@@ -30,6 +33,20 @@ export default function Home() {
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
+
+  const handleGalleryClick = () => {
+    const newClicks = galleryClicks + 1;
+    setGalleryClicks(newClicks);
+
+    if (newClicks >= 3) {
+      setShowAlbumLink(true);
+      toast({
+        title: 'Secret Unlocked!',
+        description: "You've found the hidden album link!",
+      });
+      setGalleryClicks(0); // Reset for fun
+    }
+  };
   
   return (
     <>
@@ -60,7 +77,11 @@ export default function Home() {
 
         <section id="gallery" className="py-16 md:py-24">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12 text-accent">
+            <h2 
+              className="font-headline text-4xl md:text-5xl font-bold text-center mb-12 text-accent cursor-pointer select-none"
+              onClick={handleGalleryClick}
+              title="What could happen?"
+            >
               Gallery
             </h2>
             <Gallery />
