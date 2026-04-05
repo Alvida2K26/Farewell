@@ -13,25 +13,11 @@
     "alt": "The farewell event invitation.",
     "hint": "event invitation"
   },
-  "group-photo": {
-    "src": "https://picsum.photos/seed/gp/800/600",
+  "new-photo": {
+    "src": "/images/003.jpeg",
     "width": 800,
     "height": 600,
-    "alt": "A placeholder image for a group photo.",
-    "hint": "group photo"
-  },
-  "award-ceremony": {
-    "src": "https://picsum.photos/seed/ac/600/800",
-    "width": 600,
-    "height": 800,
-    "alt": "A placeholder image for an award ceremony.",
-    "hint": "award ceremony"
-  },
-  "dj-night": {
-    "src": "https://picsum.photos/seed/dj/800/500",
-    "width": 800,
-    "height": 500,
-    "alt": "A placeholder image for a DJ night.",
-    "hint": "dj night"
+    "alt": "A photo from the event.",
+    "hint": "event photo"
   }
 }
