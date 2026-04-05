@@ -1,6 +1,11 @@
 {
   "gallery": [
     {
+      "src": "https://picsum.photos/seed/invitation-card/600/800",
+      "alt": "Event invitation for The Final Prescription",
+      "hint": "event invitation"
+    },
+    {
       "src": "https://picsum.photos/seed/event1/600/400",
       "alt": "Students arriving at the event",
       "hint": "event arrival"
