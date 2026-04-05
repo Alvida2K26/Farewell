@@ -1,0 +1,13 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="none">
+      <defs>
+        <style type="text/css">
+          #holder_18e55e0d1d9 text { fill:rgba(255,255,255,.75);font-weight:normal;font-family:Helvetica, monospace;font-size:40pt }
+        </style>
+      </defs>
+      <g id="holder_18e55e0d1d9">
+        <rect width="800" height="600" fill="#555"></rect>
+        <g>
+          <text x="100" y="318">Placeholder: Replace this file</text>
+        </g>
+      </g>
+    </svg>
