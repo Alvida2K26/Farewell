@@ -13,11 +13,5 @@
     "alt": "A photo from the event.",
     "hint": "event guest"
   },
-  "invitation": {
-    "src": "/images/invitation-placeholder.svg",
-    "width": 600,
-    "height": 800,
-    "alt": "The event invitation.",
-    "hint": "event invitation"
-  }
+  "invitation": {}
 }
