@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
@@ -15,7 +15,7 @@ const navLinks = [
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +26,7 @@ export function Header() {
   }, []);
 
   const handleLinkClick = () => {
-    setIsMobileMenuOpen(false);
+    setIsMenuOpen(false);
   };
   
   return (
@@ -36,45 +36,29 @@ export function Header() {
         isScrolled ? 'bg-background/80 backdrop-blur-lg border-b border-border' : 'bg-transparent'
       )}
     >
-      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <PillIcon className="h-8 w-8 text-primary" />
-          <span className="text-xl font-bold font-headline text-foreground">
-            The Final Prescription
-          </span>
-        </Link>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-2">
-          {navLinks.map((link) => (
-            <Button key={link.label} variant="ghost" asChild>
-              <a href={link.href}>{link.label}</a>
-            </Button>
-          ))}
-        </nav>
-
-        {/* Mobile Navigation */}
-        <div className="md:hidden">
-          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+      <div className="container mx-auto px-4 h-20 flex items-center justify-start gap-4">
+        {/* Navigation */}
+        <div>
+          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background">
+            <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-background">
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between p-4 border-b">
-                   <Link href="/" className="flex items-center space-x-2">
+                   <Link href="/" className="flex items-center space-x-2" onClick={handleLinkClick}>
                      <PillIcon className="h-6 w-6 text-primary" />
                      <span className="text-lg font-bold font-headline text-foreground">
                         The Final Prescription
                       </span>
                    </Link>
-                   <SheetTrigger asChild>
+                   <SheetClose asChild>
                      <Button variant="ghost" size="icon">
                        <X/>
                      </Button>
-                   </SheetTrigger>
+                   </SheetClose>
                 </div>
                 <nav className="flex flex-col items-center justify-center flex-1 space-y-6">
                   {navLinks.map((link) => (
@@ -92,6 +76,13 @@ export function Header() {
             </SheetContent>
           </Sheet>
         </div>
+
+        <Link href="/" className="flex items-center space-x-2">
+          <PillIcon className="h-8 w-8 text-primary" />
+          <span className="text-xl font-bold font-headline text-foreground">
+            The Final Prescription
+          </span>
+        </Link>
       </div>
     </header>
   );
