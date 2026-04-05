@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { UtensilsCrossed, Wheat, Drumstick, Cake, Leaf } from 'lucide-react';
 import { Countdown } from './countdown';
+import { useMenu } from '@/context/menu-context';
 
 const menu = {
   mainCourseVeg: ['Paneer Curry', 'Cashew Tomato Curry', 'Cabbage Fry'],
@@ -16,25 +17,25 @@ const menu = {
 export function FoodMenu() {
   const revealDate = new Date('2026-04-13T00:00:00');
   const [isClient, setIsClient] = useState(false);
-  const [showMenu, setShowMenu] = useState(false);
+  const { showMenu, revealMenu } = useMenu();
 
   useEffect(() => {
     setIsClient(true);
     // This effect will run only on the client.
     // We can safely check the date here.
     if (new Date() >= revealDate) {
-      setShowMenu(true);
+      revealMenu();
     } else {
       // If the menu is not yet to be shown, set up a timer to check again.
       const timer = setInterval(() => {
         if (new Date() >= revealDate) {
-          setShowMenu(true);
+          revealMenu();
           clearInterval(timer);
         }
       }, 1000);
       return () => clearInterval(timer);
     }
-  }, [revealDate]);
+  }, [revealDate, revealMenu]);
 
   if (!isClient) {
     // To avoid hydration mismatch, render a placeholder or nothing on the server.
