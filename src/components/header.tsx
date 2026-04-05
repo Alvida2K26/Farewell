@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
-import { Menu, X } from 'lucide-react';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
@@ -54,11 +54,6 @@ export function Header() {
                         The Final Prescription
                       </span>
                    </Link>
-                   <SheetClose asChild>
-                     <Button variant="ghost" size="icon">
-                       <X/>
-                     </Button>
-                   </SheetClose>
                 </div>
                 <nav className="flex flex-col items-center justify-center flex-1 space-y-6">
                   {navLinks.map((link) => (
