@@ -10,7 +10,6 @@ import Link from 'next/link';
 const navLinks = [
   { href: '#agenda', label: 'Agenda' },
   { href: '#menu', label: 'Menu' },
-  { href: '#gallery', label: 'Gallery' },
 ];
 
 export function Header() {
