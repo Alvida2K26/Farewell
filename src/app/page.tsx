@@ -9,8 +9,6 @@ import { FoodMenu } from '@/components/food-menu';
 import { Footer } from '@/components/footer';
 import { Separator } from '@/components/ui/separator';
 import { Gallery } from '@/components/gallery';
-import { Button } from '@/components/ui/button';
-import { Camera } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -48,12 +46,6 @@ export default function Home() {
               Gallery
             </h2>
             <Gallery />
-            <Button asChild className="mt-8">
-                <Link href="https://drive.google.com/drive/folders/1-x4mW5z_1YdTltMvSzO8cLYnmp5nbmzZ?usp=drive_link" target="_blank">
-                    <Camera className="mr-2" />
-                    View Full Album
-                </Link>
-            </Button>
           </div>
         </section>
 

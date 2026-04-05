@@ -45,7 +45,7 @@ export function Header() {
       )}
     >
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 md:gap-4">
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
@@ -86,7 +86,7 @@ export function Header() {
 
           <Link href="/" className="flex items-center space-x-2">
             <GraduationCap className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold font-headline text-foreground">
+            <span className="text-lg md:text-xl font-bold font-headline text-foreground">
               The Final Prescription
             </span>
           </Link>

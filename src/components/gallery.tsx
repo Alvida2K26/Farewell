@@ -1,70 +1,66 @@
 'use client';
 
-import Image from 'next/image';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useState } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import images from '@/lib/placeholder-images.json';
-
-const imageList = Object.values(images).filter((image) => image.src && image.width && image.height);
-
-type Image = {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-  hint?: string;
-};
-
+import { Camera } from 'lucide-react';
+import { Countdown } from './countdown';
 
 export function Gallery() {
-  const [selectedImage, setSelectedImage] = useState<Image | null>(null);
+  const [clickCount, setClickCount] = useState(0);
+  const [showButton, setShowButton] = useState(false);
+
+  // Set the target date to April 15, 2026, 10:00 AM as per user request and blueprint.
+  const targetDate = new Date('2026-04-15T10:00:00');
+
+  useEffect(() => {
+    const checkDate = () => {
+      if (new Date().getTime() > targetDate.getTime()) {
+        setShowButton(true);
+      }
+    };
+
+    checkDate();
+    const timer = setInterval(checkDate, 1000 * 60); // Check every minute
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const handleClick = () => {
+    const newClickCount = clickCount + 1;
+    setClickCount(newClickCount);
+    if (newClickCount >= 3) {
+      setShowButton(true);
+    }
+  };
+
+  if (showButton) {
+    return (
+      <div className="text-center">
+        <Button asChild className="mt-8">
+          <Link href="https://drive.google.com/drive/folders/1-x4mW5z_1YdTltMvSzO8cLYnmp5nbmzZ?usp=drive_link" target="_blank">
+            <Camera className="mr-2" />
+            View Full Album
+          </Link>
+        </Button>
+        <p className="text-sm text-muted-foreground mt-2">The gallery is now unlocked. Click the button to view the photos.</p>
+      </div>
+    );
+  }
 
   return (
-    <>
-      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-        {imageList.map((image, index) => (
-          <div
-            key={image.src || index}
-            className="break-inside-avoid cursor-pointer"
-            onClick={() => setSelectedImage(image)}
-          >
-            <Card className="overflow-hidden transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
-              <CardContent className="p-0">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={image.width}
-                  height={image.height}
-                  className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
-                  data-ai-hint={image.hint}
-                />
-              </CardContent>
-            </Card>
-          </div>
-        ))}
+    <div
+      className="text-center p-8 rounded-lg border-2 border-dashed border-accent/30 max-w-2xl mx-auto cursor-pointer"
+      onClick={handleClick}
+      title="You might find something if you keep clicking..."
+    >
+      <h3 className="font-headline text-2xl md:text-3xl font-bold text-accent mb-4">
+        Gallery Unlocks In
+      </h3>
+      <div className="mb-6">
+        <Countdown targetDate={targetDate} />
       </div>
-
-      <Dialog
-        open={!!selectedImage}
-        onOpenChange={(isOpen) => !isOpen && setSelectedImage(null)}
-      >
-        <DialogContent className="max-w-5xl w-full p-0 bg-transparent border-0">
-          <DialogTitle className="sr-only">Image</DialogTitle>
-          {selectedImage && (
-            <Image
-              src={selectedImage.src}
-              alt={selectedImage.alt}
-              width={selectedImage.width}
-              height={selectedImage.height}
-              className="w-full h-auto object-contain rounded-lg"
-              style={{ maxHeight: '90vh' }}
-            />
-          )}
-        </DialogContent>
-      </Dialog>
-    </>
+      <p className="text-sm text-muted-foreground mt-2">The gallery will be unlocked after the event starts . For now, enjoy the countdown.</p>
+    </div>
   );
 }
