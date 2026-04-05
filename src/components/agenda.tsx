@@ -16,14 +16,6 @@ import {
   PartyPopper,
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
-
 
 const agendaItems = [
   { time: '10:00 AM', title: 'Arrival & Welcome', icon: Flower2, description: 'Welcome drinks are served as we greet our seniors with souvenirs or flowers.' },
@@ -43,38 +35,23 @@ const agendaItems = [
 
 export function Agenda() {
   return (
-    <div className="relative max-w-5xl mx-auto">
-      <Carousel
-        opts={{
-          align: 'start',
-        }}
-        className="w-full"
-      >
-        <CarouselContent className="-ml-4">
-          {agendaItems.map((item, index) => (
-            <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/3 lg:basis-1/4">
-              <div className="p-1 h-full">
-                <Card className="bg-card border-border/60 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full">
-                  <CardHeader className="flex flex-row items-start gap-4 space-y-0">
-                    <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground flex-shrink-0 mt-1">
-                        <item.icon className="w-5 h-5" />
-                    </div>
-                    <div className="flex flex-col">
-                      <CardTitle className="font-headline text-xl text-accent leading-tight">{item.title}</CardTitle>
-                      <p className="text-sm font-bold text-muted-foreground">{item.time}</p>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-muted-foreground text-sm">{item.description}</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious className="absolute -left-12 top-1/2 -translate-y-1/2 hidden sm:flex" />
-        <CarouselNext className="absolute -right-12 top-1/2 -translate-y-1/2 hidden sm:flex" />
-      </Carousel>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {agendaItems.map((item, index) => (
+        <Card key={index} className="bg-card border-border/60 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full">
+          <CardHeader className="flex flex-row items-start gap-4 space-y-0">
+            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground flex-shrink-0 mt-1">
+                <item.icon className="w-5 h-5" />
+            </div>
+            <div className="flex flex-col">
+              <CardTitle className="font-headline text-xl text-accent leading-tight">{item.title}</CardTitle>
+              <p className="text-sm font-bold text-muted-foreground">{item.time}</p>
+            </div>
+          </CardHeader>
+          <CardContent className="flex-grow">
+            <p className="text-muted-foreground text-sm">{item.description}</p>
+          </CardContent>
+        </Card>
+      ))}
     </div>
   );
 }
