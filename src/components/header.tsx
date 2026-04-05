@@ -12,7 +12,6 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { ThemeToggle } from './theme-toggle';
 
 const navLinks = [
   { href: '#agenda', label: 'Agenda', icon: CalendarDays },
@@ -92,7 +91,6 @@ export function Header() {
             </span>
           </Link>
         </div>
-        <ThemeToggle />
       </div>
     </header>
   );
