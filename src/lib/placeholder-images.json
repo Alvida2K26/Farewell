@@ -1,9 +1,37 @@
 {
+  "user-photo": {
+    "src": "/images/my-photo.png",
+    "width": 800,
+    "height": 600,
+    "alt": "A photo from the event.",
+    "hint": "event photo"
+  },
   "invitation": {
     "src": "/images/invitation.svg",
     "width": 800,
     "height": 1000,
-    "alt": "A placeholder for the farewell event invitation. Replace this by adding your image to public/images and updating this file.",
+    "alt": "The farewell event invitation.",
     "hint": "event invitation"
+  },
+  "group-photo": {
+    "src": "https://picsum.photos/seed/gp/800/600",
+    "width": 800,
+    "height": 600,
+    "alt": "A placeholder image for a group photo.",
+    "hint": "group photo"
+  },
+  "award-ceremony": {
+    "src": "https://picsum.photos/seed/ac/600/800",
+    "width": 600,
+    "height": 800,
+    "alt": "A placeholder image for an award ceremony.",
+    "hint": "award ceremony"
+  },
+  "dj-night": {
+    "src": "https://picsum.photos/seed/dj/800/500",
+    "width": 800,
+    "height": 500,
+    "alt": "A placeholder image for a DJ night.",
+    "hint": "dj night"
   }
 }

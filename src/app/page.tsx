@@ -8,7 +8,6 @@ import { FoodMenu } from '@/components/food-menu';
 import { Footer } from '@/components/footer';
 import { Separator } from '@/components/ui/separator';
 import { Gallery } from '@/components/gallery';
-import { UserImage } from '@/components/user-image';
 
 export default function Home() {
   return (
@@ -33,17 +32,6 @@ export default function Home() {
               Gastronomic Journey
             </h2>
             <FoodMenu />
-          </div>
-        </section>
-
-        <Separator className="container my-8 bg-border/20" />
-
-        <section id="user-image" className="py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12 text-accent">
-              Your Photo
-            </h2>
-            <UserImage />
           </div>
         </section>
 
