@@ -1,9 +1,11 @@
 'use client';
 
 import React, { useRef, useEffect } from 'react';
+import { useTheme } from 'next-themes';
 
 export function Particles() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -89,13 +91,16 @@ export function Particles() {
 
     const initParticles = () => {
       particles = [];
+      const isDarkMode = resolvedTheme === 'dark';
       for (let i = 0; i < particleCount; i++) {
         const size = Math.random() * 2 + 1;
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
         const speedX = (Math.random() - 0.5) * 0.5;
         const speedY = (Math.random() - 0.5) * 0.5;
-        const colors = ['#E3B041', 'rgba(255,255,255,0.7)'];
+        const colors = isDarkMode
+          ? ['#E3B041', 'rgba(255,255,255,0.7)']
+          : ['#718096', 'rgba(45, 55, 72, 0.5)'];
         const color = colors[Math.floor(Math.random() * colors.length)];
         particles.push(new Particle(x, y, size, speedX, speedY, color));
       }
@@ -116,7 +121,7 @@ export function Particles() {
     animate();
 
     return () => window.removeEventListener('resize', resizeCanvas);
-  }, []);
+  }, [resolvedTheme]);
 
   return (
     <canvas
