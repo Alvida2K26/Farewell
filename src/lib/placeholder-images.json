@@ -5,33 +5,5 @@
     "height": 1000,
     "alt": "A farewell event invitation for 'The Final Prescription'",
     "hint": "event invitation"
-  },
-  "graduation": {
-    "src": "https://picsum.photos/seed/gradcaps/600/800",
-    "width": 600,
-    "height": 800,
-    "alt": "Students celebrating their graduation",
-    "hint": "graduation celebration"
-  },
-  "party": {
-    "src": "https://picsum.photos/seed/farewellparty/800/600",
-    "width": 800,
-    "height": 600,
-    "alt": "Students enjoying the farewell party",
-    "hint": "farewell party"
-  },
-  "cake": {
-    "src": "https://picsum.photos/seed/cakecutting/700/500",
-    "width": 700,
-    "height": 500,
-    "alt": "Cake cutting ceremony at the event",
-    "hint": "cake cutting"
-  },
-  "group_photo": {
-    "src": "https://picsum.photos/seed/groupphoto/900/600",
-    "width": 900,
-    "height": 600,
-    "alt": "A group photo of the graduating class",
-    "hint": "group photo"
   }
 }
