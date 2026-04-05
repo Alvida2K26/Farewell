@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "gallery-1",
+      "description": "A group of friends celebrating at an event.",
+      "imageUrl": "https://picsum.photos/seed/101/600/400",
+      "imageHint": "event celebration"
+    },
+    {
+      "id": "gallery-2",
+      "description": "A candid shot of people laughing during a speech.",
+      "imageUrl": "https://picsum.photos/seed/102/600/400",
+      "imageHint": "candid people"
+    },
+    {
+      "id": "gallery-3",
+      "description": "A beautifully decorated event venue at night.",
+      "imageUrl": "https://picsum.photos/seed/103/600/400",
+      "imageHint": "event venue"
+    },
+    {
+      "id": "gallery-4",
+      "description": "A DJ playing music at a party with a vibrant crowd.",
+      "imageUrl": "https://picsum.photos/seed/104/600/400",
+      "imageHint": "DJ party"
+    },
+    {
+      "id": "gallery-5",
+      "description": "Close-up of friends taking a selfie.",
+      "imageUrl": "https://picsum.photos/seed/105/600/400",
+      "imageHint": "friends selfie"
+    },
+    {
+      "id": "gallery-6",
+      "description": "A formal dinner setting at the event.",
+      "imageUrl": "https://picsum.photos/seed/106/600/400",
+      "imageHint": "dinner setting"
+    },
+    {
+      "id": "gallery-7",
+      "description": "Graduates in caps and gowns tossing them in the air.",
+      "imageUrl": "https://picsum.photos/seed/107/600/400",
+      "imageHint": "graduation celebration"
+    },
+    {
+      "id": "gallery-8",
+      "description": "A dance floor full of people enjoying the music.",
+      "imageUrl": "https://picsum.photos/seed/108/600/400",
+      "imageHint": "dance floor"
+    }
+  ]
 }
