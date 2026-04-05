@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Hero } from '@/components/hero';
 import { Header } from '@/components/header';
@@ -13,6 +13,23 @@ import { Button } from '@/components/ui/button';
 import { Camera } from 'lucide-react';
 
 export default function Home() {
+  const [showAlbumLink, setShowAlbumLink] = useState(false);
+
+  useEffect(() => {
+    const linkRevealDate = new Date('2026-04-15T09:59:00');
+
+    const checkDate = () => {
+      if (new Date() >= linkRevealDate) {
+        setShowAlbumLink(true);
+      }
+    };
+
+    checkDate(); // Check on initial render
+    const interval = setInterval(checkDate, 1000 * 60); // Check every minute
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
+  
   return (
     <>
       <Header />
@@ -46,12 +63,14 @@ export default function Home() {
               Gallery
             </h2>
             <Gallery />
-            <Button asChild className="mt-8">
-                <Link href="https://drive.google.com/drive/folders/1-x4mW5z_1YdTltMvSzO8cLYnmp5nbmzZ?usp=drive_link" target="_blank">
-                    <Camera className="mr-2" />
-                    View Full Album
-                </Link>
-            </Button>
+            {showAlbumLink && (
+              <Button asChild className="mt-8">
+                  <Link href="https://drive.google.com/drive/folders/1-x4mW5z_1YdTltMvSzO8cLYnmp5nbmzZ?usp=drive_link" target="_blank">
+                      <Camera className="mr-2" />
+                      View Full Album
+                  </Link>
+              </Button>
+            )}
           </div>
         </section>
 
