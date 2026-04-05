@@ -15,7 +15,7 @@ export function Particles() {
     if (!ctx) return;
 
     let particles: Particle[] = [];
-    const particleCount = 100;
+    const particleCount = 150;
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
@@ -30,7 +30,9 @@ export function Particles() {
       speedX: number;
       speedY: number;
       color: string;
-      shape: 'dot' | 'star';
+      shape: 'dot' | 'star' | 'planet';
+      opacity: number;
+      opacitySpeed: number;
 
       constructor(x: number, y: number, size: number, speedX: number, speedY: number, color: string) {
         this.x = x;
@@ -39,28 +41,63 @@ export function Particles() {
         this.speedX = speedX;
         this.speedY = speedY;
         this.color = color;
-        this.shape = Math.random() > 0.5 ? 'star' : 'dot';
+        
+        const rand = Math.random();
+        if (rand < 0.6) {
+          this.shape = 'dot';
+        } else if (rand < 0.95) {
+          this.shape = 'star';
+        } else {
+          this.shape = 'planet';
+          this.size = this.size * (Math.random() * 2 + 2); // Planets are bigger
+        }
+
+        this.opacity = Math.random();
+        this.opacitySpeed = (Math.random() - 0.5) * 0.02;
       }
 
       update() {
         this.x += this.speedX;
         this.y += this.speedY;
 
-        if (this.size > 0.2) this.size -= 0.01;
-        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+        // Fade in and out
+        this.opacity += this.opacitySpeed;
+        if (this.opacity <= 0.1 || this.opacity >= 1) {
+          this.opacitySpeed *= -1;
+        }
+
+        // Wrap particles around screen for a seamless effect
+        if (this.x > canvas.width + this.size) this.x = -this.size;
+        else if (this.x < -this.size) this.x = canvas.width + this.size;
+
+        if (this.y > canvas.height + this.size) this.y = -this.size;
+        else if (this.y < -this.size) this.y = canvas.height + this.size;
       }
 
       draw() {
         if (!ctx) return;
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
-        if (this.shape === 'star') {
-          this.drawStar(ctx);
-        } else {
-          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.globalAlpha = this.opacity;
+        
+        switch (this.shape) {
+          case 'star':
+            ctx.fillStyle = this.color;
+            ctx.beginPath();
+            this.drawStar(ctx);
+            ctx.fill();
+            break;
+          case 'planet':
+            this.drawPlanet(ctx);
+            break;
+          case 'dot':
+          default:
+            ctx.fillStyle = this.color;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+            break;
         }
-        ctx.fill();
+        
+        ctx.globalAlpha = 1.0; // Reset global alpha
       }
 
       drawStar(ctx: CanvasRenderingContext2D) {
@@ -87,20 +124,38 @@ export function Particles() {
         ctx.lineTo(this.x, this.y - outerRadius);
         ctx.closePath();
       }
+
+      drawPlanet(ctx: CanvasRenderingContext2D) {
+        // Planet Body
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Rings
+        if (this.size > 2) {
+          ctx.strokeStyle = this.color;
+          ctx.lineWidth = this.size * 0.15;
+          const tilt = Math.PI / 6; 
+          ctx.beginPath();
+          ctx.ellipse(this.x, this.y, this.size * 1.8, this.size * 0.6, tilt, 0, 2 * Math.PI);
+          ctx.stroke();
+        }
+      }
     }
 
     const initParticles = () => {
       particles = [];
       const isDarkMode = resolvedTheme === 'dark';
       for (let i = 0; i < particleCount; i++) {
-        const size = Math.random() * 2 + 1;
+        const size = Math.random() * 1.5 + 0.5;
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
-        const speedX = (Math.random() - 0.5) * 0.5;
-        const speedY = (Math.random() - 0.5) * 0.5;
+        const speedX = (Math.random() - 0.5) * 0.3;
+        const speedY = (Math.random() - 0.5) * 0.3;
         const colors = isDarkMode
-          ? ['#E3B041', 'rgba(255,255,255,0.7)']
-          : ['#718096', 'rgba(45, 55, 72, 0.5)'];
+          ? ['#E3B041', 'rgba(255,255,255,0.7)', '#99c3ff'] // Gold, White, Light Blue
+          : ['#718096', 'rgba(45, 55, 72, 0.5)', '#4a5568'];
         const color = colors[Math.floor(Math.random() * colors.length)];
         particles.push(new Particle(x, y, size, speedX, speedY, color));
       }
