@@ -1,6 +1,6 @@
 import type {NextConfig} from 'next';
 
-const repo = 'studio'
+const repo = 'farewell'
 const assetPrefix = `/${repo}/`
 const basePath = `/${repo}`
 
