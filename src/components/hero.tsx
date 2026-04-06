@@ -33,7 +33,7 @@ export function Hero() {
         </p>
 
         <h1 className="font-headline text-4xl sm:text-5xl md:text-7xl font-bold text-accent drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] my-4">
-          HORA DE VOLAR
+          Alvida 2K26
           </h1>
 
         <p className="text-base sm:text-lg md:text-xl text-foreground/90">

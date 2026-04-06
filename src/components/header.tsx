@@ -64,7 +64,7 @@ export function Header() {
                 >
                   <GraduationCap className="h-10 w-10 text-primary" />
                   <span className="text-xl font-bold font-headline text-foreground">
-                    Hora de volar
+                    Alvida 2K26
                   </span>
                 </Link>
               </div>
@@ -87,7 +87,7 @@ export function Header() {
           <Link href="/" className="flex items-center space-x-2">
             <GraduationCap className="h-8 w-8 text-primary" />
             <span className="text-lg md:text-xl font-bold font-headline text-foreground">
-              Hora de volar
+              Alvida 2K26
             </span>
           </Link>
         </div>
