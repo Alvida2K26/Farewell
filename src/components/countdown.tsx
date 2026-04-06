@@ -24,9 +24,15 @@ const calculateTimeLeft = (targetDate: Date) => {
 };
 
 const CountdownComponent = ({ targetDate }: { targetDate: Date }) => {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetDate));
+  // By initializing with a static, non-date-dependent value, we ensure server and client render the same initial HTML.
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
+    // This code runs only on the client, after hydration.
+    // We set the initial time correctly here.
+    setTimeLeft(calculateTimeLeft(targetDate));
+
+    // Then we set up the interval to update it.
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft(targetDate));
     }, 1000);
@@ -37,7 +43,7 @@ const CountdownComponent = ({ targetDate }: { targetDate: Date }) => {
   const timerComponents = Object.entries(timeLeft).map(([unit, value]) => {
     if (value < 0) return null;
     return (
-      <div key={unit} className="flex flex-col items-center mx-1 sm:mx-2 p-2 bg-background/20 backdrop-blur-sm rounded-lg min-w-[60px] sm:min-w-[70px]">
+      <div key={unit} className="flex flex-col items-center mx-1 sm:mx-2 p-2 bg-black/20 backdrop-blur-sm rounded-lg min-w-[60px] sm:min-w-[70px]">
         <span className="text-2xl sm:text-3xl font-bold">{value}</span>
         <span className="text-xs uppercase">{unit}</span>
       </div>
