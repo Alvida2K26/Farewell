@@ -25,7 +25,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-background border-t border-border mt-12 py-8">
+    <footer className="bg-background border-t border-border mt-auto py-8">
       <div className="container mx-auto px-4 text-center text-muted-foreground">
         <div className="flex flex-col md:flex-row justify-center items-center gap-6">
             <p 
@@ -33,7 +33,7 @@ export function Footer() {
               className="cursor-pointer select-none"
               title="A secret may be revealed..."
             >
-              &copy; The Final Prescription. All rights reserved.
+              &copy; Hora de volar. All rights reserved.
             </p>
             <SecretButton />
         </div>

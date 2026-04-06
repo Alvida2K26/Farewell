@@ -48,7 +48,7 @@ export function Header() {
         <div className="flex items-center gap-2 md:gap-4">
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="md:hidden">
                 <Menu />
               </Button>
             </SheetTrigger>
@@ -64,7 +64,7 @@ export function Header() {
                 >
                   <GraduationCap className="h-10 w-10 text-primary" />
                   <span className="text-xl font-bold font-headline text-foreground">
-                    The Final Prescription
+                    Hora de volar
                   </span>
                 </Link>
               </div>
@@ -87,7 +87,7 @@ export function Header() {
           <Link href="/" className="flex items-center space-x-2">
             <GraduationCap className="h-8 w-8 text-primary" />
             <span className="text-lg md:text-xl font-bold font-headline text-foreground">
-              The Final Prescription
+              Hora de volar
             </span>
           </Link>
         </div>
