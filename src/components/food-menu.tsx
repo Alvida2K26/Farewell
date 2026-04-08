@@ -7,13 +7,13 @@ import { Countdown } from './countdown';
 import { useMenu } from '@/context/menu-context';
 
 const menu = {
-  sunriseRefreshments: ['Signature Mocktails (Special Welcome for Seniors)', 'Chilled Fruit Juice'],
+  sunriseRefreshments: ['Signature Mocktails ( Special Welcome for Seniors )', 'Chilled Fruit Juice'],
   lunch: {
-    appetizer: ['Veg Manchurian (Spiced & Saucy)'],
+    appetizer: ['Veg Manchurian ( Spiced & Saucy )'],
     breadsAndCurries: ['Naan', 'Paneer Curry & Kaju Tomato Curry', 'Chicken Curry', 'Fish Fry', 'Cabbage Fry'],
     riceHarvest: ['Baby Corn Biryani', 'White Rice'],
-    theSoulfulSimmer: ['Sambar', 'Pappu (Dal)'],
-    sides: ['Crunchy Chips (papad)', 'Kothimeera pickle ( Coriander pickle )', 'Curd'],
+    theSoulfulSimmer: ['Sambar', 'Pappu ( Dal )'],
+    sides: ['Crunchy Chips ( Papad )', 'Kothimeera pickle ( Coriander pickle )', 'Curd'],
     dessert: ['Gulab Jamun', 'Ice Cream'],
   },
   twilightTreats: ['Golden Vegetable Cutlet', 'Sweet Swiss Roll', 'Badam Milk'],
