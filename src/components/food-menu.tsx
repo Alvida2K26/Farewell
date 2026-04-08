@@ -11,8 +11,9 @@ const menu = {
   lunch: {
     appetizer: ['Veg Manchurian (Spiced & Saucy)'],
     breadsAndCurries: ['Naan', 'Paneer Curry & Kaju Tomato Curry', 'Chicken Curry', 'Fish Fry', 'Cabbage Fry'],
-    riceHarvest: ['Baby Corn Biryani', 'White Rice & Sambar', 'Pappu (Dal)'],
-    sides: ['Crunchy Chips ( papad)', 'Kothimera Pickle',  'Curd'],
+    riceHarvest: ['Baby Corn Biryani', 'White Rice'],
+    theSoulfulSimmer: ['Sambar', 'Pappu (Dal)'],
+    sides: ['Crunchy Chips (papad)', 'Kothimera Pickle', 'Curd'],
     dessert: ['Gulab Jamun', 'Ice Cream'],
   },
   twilightTreats: ['Golden Vegetable Cutlet', 'Sweet Swiss Roll', 'Badam Milk'],
@@ -96,6 +97,12 @@ export function FoodMenu() {
             <h4 className="font-semibold text-lg flex items-center gap-2 mb-2 text-accent/90"><Wheat/> The Rice Harvest & Comforts</h4>
             <ul className="space-y-2 text-muted-foreground list-disc list-inside">
               {menu.lunch.riceHarvest.map((item) => <li key={item}>{item}</li>)}
+            </ul>
+          </div>
+          <div className="md:col-span-2">
+            <h4 className="font-semibold text-lg flex items-center gap-2 mb-2 text-accent/90"><Soup/> The Soulful Simmer</h4>
+            <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+              {menu.lunch.theSoulfulSimmer.map((item) => <li key={item}>{item}</li>)}
             </ul>
           </div>
           <div className="md:col-span-2">
