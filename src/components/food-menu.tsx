@@ -13,7 +13,7 @@ const menu = {
     breadsAndCurries: ['Naan', 'Paneer Curry & Kaju Tomato Curry', 'Chicken Curry', 'Fish Fry', 'Cabbage Fry'],
     riceHarvest: ['Baby Corn Biryani', 'White Rice'],
     theSoulfulSimmer: ['Sambar', 'Pappu (Dal)'],
-    sides: ['Crunchy Chips (papad)', 'Kothimera Pickle', 'Curd'],
+    sides: ['Crunchy Chips (papad)', 'Kothimeera pickle ( Coriander pickle )', 'Curd'],
     dessert: ['Gulab Jamun', 'Ice Cream'],
   },
   twilightTreats: ['Golden Vegetable Cutlet', 'Sweet Swiss Roll', 'Badam Milk'],
