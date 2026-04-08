@@ -2,20 +2,20 @@
 
 import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { UtensilsCrossed, Wheat, Drumstick, Cake, Leaf, Coffee, Cookie } from 'lucide-react';
+import { UtensilsCrossed, Wheat, Drumstick, Cake, Leaf, Coffee, Cookie, Soup } from 'lucide-react';
 import { Countdown } from './countdown';
 import { useMenu } from '@/context/menu-context';
 
 const menu = {
-  morningTreats: ['Mocktail - seniors', 'Fruit juice'],
+  sunriseRefreshments: ['Signature Mocktails (Special Welcome for Seniors)', 'Chilled Fruit Juice'],
   lunch: {
-    mainCourseVeg: ['Paneer Curry', 'Cashew Tomato Curry', 'Cabbage Fry'],
-    mainCourseNonVeg: ['Chicken Curry', 'Fish Fry'],
-    riceAndBreads: ['Naan', 'Baby Corn Biryani', 'White Rice & Sambar'],
-    accompaniments: ['Chips', 'Pickle', 'Curd'],
-    desserts: ['Gulab Jamun', 'Ice Cream'],
+    appetizer: ['Veg Manchurian (Spiced & Saucy)'],
+    breadsAndCurries: ['Naan', 'Paneer Curry & Kaju Tomato Curry', 'Traditional Chicken Curry', 'Fish Fry', 'Cabbage Fry (Classic dry side)'],
+    riceHarvest: ['Baby Corn Biryani', 'White Rice & Sambar', 'Pappu (Dal)'],
+    sides: ['Crunchy Chips, Kothimera Pickle, & Fresh Curd'],
+    dessert: ['Gulab Jamun', 'Ice Cream'],
   },
-  eveningSnacks: ['Cutlet', 'Swiss roll', 'Badam milk'],
+  twilightTreats: ['Golden Vegetable Cutlet', 'Sweet Swiss Roll', 'Badam Milk'],
 };
 
 export function FoodMenu() {
@@ -66,48 +66,48 @@ export function FoodMenu() {
     <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
       <Card className="md:col-span-2">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 font-headline text-accent"><Coffee/> Morning Treats</CardTitle>
+          <CardTitle className="flex items-center gap-2 font-headline text-accent"><Coffee/> Sunrise Refreshments</CardTitle>
         </CardHeader>
         <CardContent>
           <ul className="space-y-2 text-muted-foreground list-disc list-inside">
-            {menu.morningTreats.map((item) => <li key={item}>{item}</li>)}
+            {menu.sunriseRefreshments.map((item) => <li key={item}>{item}</li>)}
           </ul>
         </CardContent>
       </Card>
 
       <Card className="md:col-span-2">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 font-headline text-accent"><UtensilsCrossed/> Lunch</CardTitle>
+          <CardTitle className="flex items-center gap-2 font-headline text-accent"><UtensilsCrossed/> The Grand Luncheon</CardTitle>
         </CardHeader>
         <CardContent className="grid md:grid-cols-2 gap-x-8 gap-y-6">
-          <div>
-            <h4 className="font-semibold text-lg flex items-center gap-2 mb-2 text-accent/90"><Leaf/> Main Course (Veg)</h4>
+          <div className="md:col-span-2">
+            <h4 className="font-semibold text-lg flex items-center gap-2 mb-2 text-accent/90"><Soup/> The Appetizer</h4>
             <ul className="space-y-2 text-muted-foreground list-disc list-inside">
-              {menu.lunch.mainCourseVeg.map((item) => <li key={item}>{item}</li>)}
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold text-lg flex items-center gap-2 mb-2 text-accent/90"><Drumstick/> Main Course (Non-Veg)</h4>
-            <ul className="space-y-2 text-muted-foreground list-disc list-inside">
-              {menu.lunch.mainCourseNonVeg.map((item) => <li key={item}>{item}</li>)}
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold text-lg flex items-center gap-2 mb-2 text-accent/90"><Wheat/> Rice & Breads</h4>
-            <ul className="space-y-2 text-muted-foreground list-disc list-inside">
-              {menu.lunch.riceAndBreads.map((item) => <li key={item}>{item}</li>)}
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold text-lg flex items-center gap-2 mb-2 text-accent/90"><UtensilsCrossed/> Accompaniments</h4>
-            <ul className="space-y-2 text-muted-foreground list-disc list-inside">
-              {menu.lunch.accompaniments.map((item) => <li key={item}>{item}</li>)}
+              {menu.lunch.appetizer.map((item) => <li key={item}>{item}</li>)}
             </ul>
           </div>
           <div className="md:col-span-2">
-            <h4 className="font-semibold text-lg flex items-center gap-2 mb-2 text-accent/90"><Cake/> Desserts</h4>
+            <h4 className="font-semibold text-lg flex items-center gap-2 mb-2 text-accent/90"><Leaf/> The Bread & Curry Pairings</h4>
             <ul className="space-y-2 text-muted-foreground list-disc list-inside">
-              {menu.lunch.desserts.map((item) => <li key={item}>{item}</li>)}
+              {menu.lunch.breadsAndCurries.map((item) => <li key={item}>{item}</li>)}
+            </ul>
+          </div>
+          <div className="md:col-span-2">
+            <h4 className="font-semibold text-lg flex items-center gap-2 mb-2 text-accent/90"><Wheat/> The Rice Harvest & Comforts</h4>
+            <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+              {menu.lunch.riceHarvest.map((item) => <li key={item}>{item}</li>)}
+            </ul>
+          </div>
+          <div className="md:col-span-2">
+            <h4 className="font-semibold text-lg flex items-center gap-2 mb-2 text-accent/90"><UtensilsCrossed/> The Sides</h4>
+            <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+              {menu.lunch.sides.map((item) => <li key={item}>{item}</li>)}
+            </ul>
+          </div>
+          <div className="md:col-span-2">
+            <h4 className="font-semibold text-lg flex items-center gap-2 mb-2 text-accent/90"><Cake/> Sweet Surrender</h4>
+            <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+              {menu.lunch.dessert.map((item) => <li key={item}>{item}</li>)}
             </ul>
           </div>
         </CardContent>
@@ -115,11 +115,11 @@ export function FoodMenu() {
 
       <Card className="md:col-span-2">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 font-headline text-accent"><Cookie/> Evening Snacks</CardTitle>
+          <CardTitle className="flex items-center gap-2 font-headline text-accent"><Cookie/> Twilight Treats</CardTitle>
         </CardHeader>
         <CardContent>
           <ul className="space-y-2 text-muted-foreground list-disc list-inside">
-            {menu.eveningSnacks.map((item) => <li key={item}>{item}</li>)}
+            {menu.twilightTreats.map((item) => <li key={item}>{item}</li>)}
           </ul>
         </CardContent>
       </Card>
