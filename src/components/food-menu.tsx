@@ -10,9 +10,9 @@ const menu = {
   sunriseRefreshments: ['Signature Mocktails (Special Welcome for Seniors)', 'Chilled Fruit Juice'],
   lunch: {
     appetizer: ['Veg Manchurian (Spiced & Saucy)'],
-    breadsAndCurries: ['Naan', 'Paneer Curry & Kaju Tomato Curry', 'Traditional Chicken Curry', 'Fish Fry', 'Cabbage Fry (Classic dry side)'],
+    breadsAndCurries: ['Naan', 'Paneer Curry & Kaju Tomato Curry', 'Chicken Curry', 'Fish Fry', 'Cabbage Fry'],
     riceHarvest: ['Baby Corn Biryani', 'White Rice & Sambar', 'Pappu (Dal)'],
-    sides: ['Crunchy Chips, Kothimera Pickle, & Fresh Curd'],
+    sides: ['Crunchy Chips ( papad)', 'Kothimera Pickle',  'Curd'],
     dessert: ['Gulab Jamun', 'Ice Cream'],
   },
   twilightTreats: ['Golden Vegetable Cutlet', 'Sweet Swiss Roll', 'Badam Milk'],
