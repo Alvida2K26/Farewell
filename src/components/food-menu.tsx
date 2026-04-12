@@ -7,7 +7,7 @@ import { Countdown } from './countdown';
 import { useMenu } from '@/context/menu-context';
 
 const menu = {
-  sunriseRefreshments: ['Signature Mocktails ( Special Welcome for Seniors )', 'The Juice Noir'],
+  sunriseRefreshments: ['The Juice Noir'],
   lunch: {
     appetizer: ['Veg Manchurian ( Spiced & Saucy )'],
     breadsAndCurries: ['Naan', 'Paneer Curry & Kaju Tomato Curry', 'Chicken Curry', 'Fish Fry', 'Cabbage Fry'],
